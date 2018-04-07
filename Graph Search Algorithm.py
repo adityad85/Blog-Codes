@@ -1,14 +1,14 @@
-def graphSearch(problem,strategy):
+def graphSearch(problem,technique):
     start= problem.getStartState()
     explored=set([start[0]])
-    strategy.push(start)
+    technique.push(start)
 
-    while not strategy.empty():
-        node = strategy.pop()
+    while not technique.empty():
+        node = technique.pop()
         if problem.isGoalState(node):
             return node[i]
         for move in problem.getSuccessors(node):
             if move[0] not inexplored:
                 explored.add(move[0])
-                strategy.push(move)
+                technique.push(move)
     return None
